@@ -1,6 +1,6 @@
 /**
      * @param Create$MODEL_NAME$APIRequest $request
-     * @return Response
+     * @return ApiResponse
      *
      * @SWG\Post(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$",
