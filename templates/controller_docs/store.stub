@@ -4,7 +4,7 @@
      *
      * @SWG\Post(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$",
-     *      summary="Store a newly created $MODEL_NAME$ in storage",
+     *      summary="在 $MODEL_NAME$ 中创建一条新的记录",
      *      tags={"$MODEL_NAME$"},
      *      description="Store $MODEL_NAME$",
      *      produces={"application/json"},
@@ -21,22 +21,41 @@
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(
-     *                  property="success",
-     *                  type="boolean"
+     *                  property="status",
+     *                  type="string",
+     *                  default="success"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="200"
      *              ),
      *              @SWG\Property(
      *                  property="data",
      *                  ref="#/definitions/$MODEL_NAME$"
-     *              ),
-     *              @SWG\Property(
-     *                  property="message",
-     *                  type="string"
      *              )
      *          )
      *      ),
      *      @SWG\Response(
      *          response=500,
      *          description="添加失败",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="status",
+     *                  type="string",
+     *                  default="error"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="500"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
      *      )
      * )
      */

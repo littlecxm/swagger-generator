@@ -21,22 +21,42 @@
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(
-     *                  property="success",
-     *                  type="boolean"
+     *                  property="status",
+     *                  type="string",
+     *                  default="success"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="200"
      *              ),
      *              @SWG\Property(
      *                  property="data",
-     *                  type="string"
-     *              ),
-     *              @SWG\Property(
-     *                  property="message",
-     *                  type="string"
+     *                  type="array",
+     *                  @SWG\Items(ref="#/definitions/$MODEL_NAME$")
      *              )
      *          )
      *      ),
      *      @SWG\Response(
      *          response=500,
      *          description="删除失败",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="status",
+     *                  type="string",
+     *                  default="error"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="500"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
      *      )
      * )
      */

@@ -10,27 +10,45 @@
      *      produces={"application/json"},
      *      @SWG\Response(
      *          response=200,
-     *          description="暂无数据",
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(
-     *                  property="success",
-     *                  type="boolean"
+     *                  property="status",
+     *                  type="string",
+     *                  default="success"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="200"
      *              ),
      *              @SWG\Property(
      *                  property="data",
      *                  type="array",
      *                  @SWG\Items(ref="#/definitions/$MODEL_NAME$")
-     *              ),
-     *              @SWG\Property(
-     *                  property="message",
-     *                  type="string"
      *              )
      *          )
      *      ),
      *      @SWG\Response(
      *          response=404,
      *          description="暂无数据",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="status",
+     *                  type="string",
+     *                  default="error"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="404"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
      *      )
      * )
      */

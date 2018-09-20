@@ -10,23 +10,62 @@
      *      produces={"application/json"},
      *      @SWG\Parameter(
      *          name="id",
-     *          description="id of $MODEL_NAME$",
+     *          description="$MODEL_NAME$中的id",
      *          type="integer",
      *          required=true,
      *          in="path"
-     *      ),
-     *      @SWG\Response(
-     *          response=200,
-     *          description="successful operation",
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(
-     *                  property="success",
-     *                  type="boolean"
+     *                  property="status",
+     *                  type="string",
+     *                  default="success"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="200"
      *              ),
      *              @SWG\Property(
      *                  property="data",
      *                  ref="#/definitions/$MODEL_NAME$"
+     *              )
+     *          )
+     *      ),
+     *      @SWG\Response(
+     *          response=200,
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="status",
+     *                  type="string",
+     *                  default="error"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="200"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      ),
+     *      @SWG\Response(
+     *          response=404,
+     *          description="$MODEL_NAME$中的条目不存在",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="status",
+     *                  type="string",
+     *                  default="error"
+     *              ),
+     *              @SWG\Property(
+     *                  property="code",
+     *                  type="integer",
+     *                  default="404"
      *              ),
      *              @SWG\Property(
      *                  property="message",
