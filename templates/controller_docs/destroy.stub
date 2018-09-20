@@ -1,12 +1,12 @@
 /**
      * @param int $id
-     * @return Response
+     * @return ApiResponse
      *
      * @SWG\Delete(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
-     *      summary="Remove the specified $MODEL_NAME$ from storage",
+     *      summary="从 $MODEL_NAME$ 中删除一个特定条目",
      *      tags={"$MODEL_NAME$"},
-     *      description="Delete $MODEL_NAME$",
+     *      description="删除 $MODEL_NAME$",
      *      produces={"application/json"},
      *      @SWG\Parameter(
      *          name="id",
@@ -17,7 +17,7 @@
      *      ),
      *      @SWG\Response(
      *          response=200,
-     *          description="successful operation",
+     *          description="删除成功",
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(
@@ -33,6 +33,9 @@
      *                  type="string"
      *              )
      *          )
-     *      )
+     *      ),
+     *      @SWG\Response(
+     *          response=500,
+     *          description="删除失败",
      * )
      */

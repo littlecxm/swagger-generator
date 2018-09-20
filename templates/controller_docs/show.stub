@@ -4,9 +4,9 @@
      *
      * @SWG\Get(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
-     *      summary="Display the specified $MODEL_NAME$",
+     *      summary="显示一个 $MODEL_NAME$ 中特定的条目",
      *      tags={"$MODEL_NAME$"},
-     *      description="Get $MODEL_NAME$",
+     *      description="取出 $MODEL_NAME$",
      *      produces={"application/json"},
      *      @SWG\Parameter(
      *          name="id",

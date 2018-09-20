@@ -4,13 +4,12 @@
      *
      * @SWG\Get(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$",
-     *      summary="Get a listing of the $MODEL_NAME_PLURAL$.",
+     *      summary="显示 $MODEL_NAME_PLURAL$ 的一个列表.",
      *      tags={"$MODEL_NAME$"},
-     *      description="Get all $MODEL_NAME_PLURAL$",
+     *      description="取出 $MODEL_NAME_PLURAL$ 的全部条目",
      *      produces={"application/json"},
      *      @SWG\Response(
      *          response=200,
-     *          description="successful operation",
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(
@@ -27,6 +26,10 @@
      *                  type="string"
      *              )
      *          )
+     *      ),
+     *      @SWG\Response(
+     *          response=404,
+     *          description="暂无数据",
      *      )
      * )
      */
