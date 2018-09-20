@@ -10,6 +10,7 @@
      *      produces={"application/json"},
      *      @SWG\Response(
      *          response=200,
+     *          description="暂无数据",
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(

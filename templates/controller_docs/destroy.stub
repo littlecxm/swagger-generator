@@ -37,5 +37,6 @@
      *      @SWG\Response(
      *          response=500,
      *          description="删除失败",
+     *      )
      * )
      */
