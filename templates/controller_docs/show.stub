@@ -13,18 +13,18 @@
      *          description="$MODEL_NAME$中的id",
      *          type="integer",
      *          required=true,
-     *          in="path"
+     *          in="path",
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(
      *                  property="status",
      *                  type="string",
-     *                  default="success"
+     *                  example="success"
      *              ),
      *              @SWG\Property(
      *                  property="code",
      *                  type="integer",
-     *                  default="200"
+     *                  example="200"
      *              ),
      *              @SWG\Property(
      *                  property="data",
@@ -34,17 +34,18 @@
      *      ),
      *      @SWG\Response(
      *          response=200,
+     *          description="成功取出条目",
      *          @SWG\Schema(
      *              type="object",
      *              @SWG\Property(
      *                  property="status",
      *                  type="string",
-     *                  default="error"
+     *                  example="error"
      *              ),
      *              @SWG\Property(
      *                  property="code",
      *                  type="integer",
-     *                  default="200"
+     *                  example="200"
      *              ),
      *              @SWG\Property(
      *                  property="message",
@@ -60,12 +61,12 @@
      *              @SWG\Property(
      *                  property="status",
      *                  type="string",
-     *                  default="error"
+     *                  example="error"
      *              ),
      *              @SWG\Property(
      *                  property="code",
      *                  type="integer",
-     *                  default="404"
+     *                  example="404"
      *              ),
      *              @SWG\Property(
      *                  property="message",

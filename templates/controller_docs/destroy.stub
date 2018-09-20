@@ -23,12 +23,12 @@
      *              @SWG\Property(
      *                  property="status",
      *                  type="string",
-     *                  default="success"
+     *                  example="success"
      *              ),
      *              @SWG\Property(
      *                  property="code",
      *                  type="integer",
-     *                  default="200"
+     *                  example="200"
      *              ),
      *              @SWG\Property(
      *                  property="data",
@@ -45,12 +45,12 @@
      *              @SWG\Property(
      *                  property="status",
      *                  type="string",
-     *                  default="error"
+     *                  example="error"
      *              ),
      *              @SWG\Property(
      *                  property="code",
      *                  type="integer",
-     *                  default="500"
+     *                  example="500"
      *              ),
      *              @SWG\Property(
      *                  property="message",
